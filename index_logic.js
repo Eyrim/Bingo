@@ -17,8 +17,17 @@ function getNumOfBoxes() {
     return ((allElements.length - boxes.length) + counter) - 1;
 }
 
+function boxListen() {
+    const box = document.getElementById("box" + (getNumOfBoxes() - 1));
+    box.addEventListener("click", () => {
+        let goal = prompt("Bingo goal", "");
+        box.textContent = goal;
+        });
+}
+
 function newButton() {
     var numOfBoxes = getNumOfBoxes.length;
+    var counter = 0;
 
     // Create new box tag
     const box = document.createElement("div");
@@ -40,6 +49,8 @@ function newButton() {
 
     // Append the new box tag to the box container element
     boxContainer.appendChild(box);
+
+    boxListen();
 }
 
 function delButton() {
@@ -47,13 +58,3 @@ function delButton() {
 
     toRemove.remove();
 }
-
-/*
-// get the element
-const element = document.getElementById('profile_title')
-
-// always checking if the element is clicked, if so, do alert('hello')
-element.addEventListener("click", () => {
-	alert('hello');
-});
-*/

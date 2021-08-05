@@ -3,6 +3,18 @@ html {
 	font-family: 'Roboto', Arial, sans-serif;
 }
 
+.boxContainer {
+	display: flex;
+	height: 100%;
+	width: 100%
+}
+
 .box {
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
 	background-color: blue;
+	height: 250%;
+	width: 25%;
+	padding: 5%;
 }
