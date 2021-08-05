@@ -43,6 +43,9 @@ function newButton() {
 }
 
 function delButton() {
+    var toRemove = document.getElementById("box" + (getNumOfBoxes() - 1));
+
+    toRemove.remove();
 }
 
 /*
